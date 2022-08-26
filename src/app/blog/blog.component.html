@@ -1,0 +1,35 @@
+<div class="container ">
+    <div class="row">
+        <div class="blog-text col-md-6 mt-5">
+            <h1 class="fw-bold text-primary"> <a class="cursor-p text-decoration-none" (click)="openCina()">Cinevillephilia</a> :: An Unquenchable Passion for Infinite Cinema</h1>
+            <p class="lead mt-5">Do you like cinema? Are you on Instagram? Then please, I beseech thee, follow <a class="cursor-p text-decoration-none fw-bold text-primary" (click)="openCina()">Cinevillephilia</a> . Cinevillephilia is a portal for my passion for cinema, and
+                for Cineville, the €20-a-month see-as-much-as-you-like godsend that is one of the absolute best things about living in the Netherlands. There you will find an ever-growing archive of surprisingly regular reviews and ratings of the latest
+                releases alongside retrospective classics, plus lovingly curated film posters and movie stills. Join me. If you like. </p>
+        </div>
+        <div class="blog-h col-md-6">
+            <img src="assets/images/blog/image.png" class="bolg-img w-100 p-5" alt="...">
+        </div>
+    </div>
+</div>
+
+<!-- admin-item -->
+
+<div class="container admin-bg">
+    <div class="row p-5">
+        <div *ngFor="let public of dataPublic" class="card-container col-md-3">
+            <div class="card-items h-100 ">
+                <a [routerLink]="['/blog-details']" class="text-decoration-none">
+                    <img [src]="'https://karlweb-api.tarekrida.com/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
+
+                    <div class="card-text mt-2">
+                        <h5 class="fw-bold text-primary">{{public.name}} </h5>
+                        <h6 class="admin-p">{{public.desc}}</h6>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,132 @@
+// .back-img {
+//     background-image: url(/assets/images/BIO-0-BANNER-who-am-i-banner-faces-collage.jpg);
+//     background-size: 100% 100%;
+//     background-position: center center;
+//     height: 100vh;
+//     background-attachment: fixed;
+//     position: relative;
+// }
+// .back-layer {
+//     background-color: rgba(0, 0, 0, 0.356);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+// }
+.aboutSon {
+    bottom: 0%;
+    right: 22%;
+}
+
+.items {
+    background-color: #fafafa;
+}
+
+.link-p {
+    text-decoration: none;
+    // -webkit-transition: color 0.5s;
+    // transition: color 0.5s;
+}
+
+.img-item {
+    transition: transform 1s;
+}
+
+.img-p:hover img {
+    transform: scale(1.2, 1.2)
+}
+
+.img-sec8 {
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+// mediaQxsm(phone)
+@media (max-width: 575.98px) {
+    .back-img {
+        background-size: cover;
+    }
+    .sec0,
+    .sec2,
+    .sec3,
+    .sec4,
+    .sec5,
+    .sec6,
+    .sec7,
+    .sec8 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .items {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 32px !important;
+    }
+    .btn-buy {
+        margin-bottom: 32px !important;
+    }
+}
+
+// mediaQsm(landscape phone)
+@media (max-width: 767.98px) {
+    .back-img {
+        background-size: cover;
+    }
+    .sec0,
+    .sec2,
+    .sec3,
+    .sec4,
+    .sec5,
+    .sec6,
+    .sec7,
+    .sec8 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .items {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 32px !important;
+    }
+    .btn-buy {
+        margin-bottom: 32px !important;
+    }
+}
+
+// mediaQmd(tablet)
+@media (max-width: 991.98px) {
+    .back-img {
+        background-size: cover;
+    }
+    .sec0,
+    .sec2,
+    .sec3,
+    .sec4,
+    .sec5,
+    .sec6,
+    .sec7,
+    .sec8 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .items {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 32px !important;
+    }
+    .items-m {
+        padding: 16px !important;
+    }
+    .img-p {
+        margin-top: 64px !important;
+    }
+    .sec3-img {
+        width: 50% !important;
+        margin: auto !important;
+    }
+    .sec3-img {
+        margin-top: 32px!important;
+        margin-bottom: 32px!important;
+    }
+}
