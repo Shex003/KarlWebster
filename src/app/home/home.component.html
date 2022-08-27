@@ -36,10 +36,29 @@
                 incidentally, he's caught up in a pair of fortuitous freak fatalities. Then when yet more toxic humans cross his path, Wesley is faced with a choice: does he sit back and allow these soulless trolls to wreak their terrible havoc? Or does
                 he take arms against a sea of misogynistic man-demons, and strike a blow for the greater good?</p>
             <p class="lead">If you'd like to know when it's available, pop your email in here:</p>
-            <form action="https://formsubmit.co/karlpwebster@gmail.com" method="POST" class="border border-primary border-1 rounded" id="browser">
+
+            <div *ngIf="isSIGNUPSuccess" class="alert alert-primary" role="alert">
+              your request has been submitted
+            </div>
+            <form  #form="ngForm" (ngSubmit)="onSIGNUPSubmit(form)" class="border border-primary border-1 rounded" id="browser">
                 <div>
-                    <div class="p-2"><input type="text" name="Name" placeholder="Enter your name" required class="form-control"></div>
-                    <div class="p-2"><input type="email" name="Email" placeholder="Enter your email" required class="form-control"></div>
+                    <div class="p-2">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="name" ngModel #name="ngModel" [ngClass]="{ 'is-invalid': isSIGNUPSubmitted && name.invalid }"  placeholder="Enter your name"  required />
+                        <div *ngIf="isSIGNUPSubmitted && name.invalid" class="invalid-feedback">
+                            <div *ngIf="$any(name)?.errors?.required"> Name is required</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="p-2">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="email" ngModel #email="ngModel" [ngClass]="{ 'is-invalid': isSIGNUPSubmitted && email.invalid }" placeholder="Enter your email"   required email />
+                        <div *ngIf="isSIGNUPSubmitted && email.invalid" class="invalid-feedback">
+                            <div *ngIf="$any(email)?.errors?.required">Email is required</div>
+                            <div *ngIf="$any(email)?.errors?.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                  </div>
 
                 </div>
                 <div class="btn-sub w-75 p-2"><button type="submit" class="  btn btn-primary"> <h6 class="m-0">SIGN UP</h6> </button></div>
@@ -193,11 +212,28 @@
         <div>
             <p class="lead fw-bold">To make sure you read The Amsterdam Good Murder Guide before it gets turned into a Netflix show and jumps the shark, pop your email address in here…</p>
         </div>
-        <form action="https://formsubmit.co/karlpwebster@gmail.com" method="POST" class="border border-primary border-1 rounded" id="browser">
+        <div *ngIf="isGiveMeGiftGreatWritingSuccess" class="alert alert-primary" role="alert">
+          your request has been submitted
+        </div>
+        <form  #GiveMeForm="ngForm" (ngSubmit)="onGiveMeGiftGreatWritingSubmit(GiveMeForm)" class="border border-primary border-1 rounded" id="browser">
             <div>
-                <div class="p-2"><input type="text" name="Name" placeholder="Enter your name" required class="form-control"></div>
-                <div class="p-2"><input type="email" name="Email" placeholder="Enter your email" required class="form-control"></div>
-
+              <div class="p-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" ngModel #name="ngModel" [ngClass]="{ 'is-invalid': isGiveMeGiftGreatWritingSubmitted && name.invalid }"  placeholder="Enter your name"  required />
+                  <div *ngIf="isGiveMeGiftGreatWritingSubmitted && name.invalid" class="invalid-feedback">
+                      <div *ngIf="$any(name)?.errors?.required"> Name is required</div>
+                  </div>
+              </div>
+              </div>
+              <div class="p-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="email" ngModel #email="ngModel" [ngClass]="{ 'is-invalid': isGiveMeGiftGreatWritingSubmitted && email.invalid }" placeholder="Enter your email"   required email />
+                  <div *ngIf="isGiveMeGiftGreatWritingSubmitted && email.invalid" class="invalid-feedback">
+                      <div *ngIf="$any(email)?.errors?.required">Email is required</div>
+                      <div *ngIf="$any(email)?.errors?.email">Email must be a valid email address</div>
+                  </div>
+              </div>
+            </div>
             </div>
             <div class="btn-sub w-75 p-2"><button type="submit" class="  btn btn-primary"> <h6 class="m-0">GIVE ME THE GIFT OF GREAT WRITING</h6> </button></div>
         </form>

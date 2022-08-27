@@ -24,11 +24,36 @@
                 <div>
                     <P class="lead fw-bold ">Alternatively, you can fill in the form below...</P>
                 </div>
-                <form action="https://formsubmit.co/karlpwebster@gmail.com" method="POST" class="border border-2 rounded">
+                <div *ngIf="isSuccess" class="alert alert-primary" role="alert">
+                  your request has been submitted
+                </div>
+                <form  #form="ngForm" (ngSubmit)="onSubmit(form)" class="border border-2 rounded">
                     <div>
-                        <div class="p-2"><input type="text" name="Name" placeholder="Enter your name" required class="form-control"></div>
-                        <div class="p-2"><input type="email" name="Email" placeholder="Enter your email" required class="form-control"></div>
-                        <div class="p-2"><textarea name="text" placeholder="Enter your text" cols="30" rows="3" required class="form-control"></textarea></div>
+                      <div class="p-2">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="name" ngModel #name="ngModel" [ngClass]="{ 'is-invalid': isSubmitted && name.invalid }"  placeholder="Enter your name"  required />
+                          <div *ngIf="isSubmitted && name.invalid" class="invalid-feedback">
+                              <div *ngIf="$any(name)?.errors?.required"> Name is required</div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="p-2">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="email" ngModel #email="ngModel" [ngClass]="{ 'is-invalid': isSubmitted && email.invalid }" placeholder="Enter your email"   required email />
+                          <div *ngIf="isSubmitted && email.invalid" class="invalid-feedback">
+                              <div *ngIf="$any(email)?.errors?.required">Email is required</div>
+                              <div *ngIf="$any(email)?.errors?.email">Email must be a valid email address</div>
+                          </div>
+                      </div>
+                    </div>
+                        <div class="p-2">
+                          <div class="form-group">
+                            <textarea  name="message" ngModel required #message="ngModel" [ngClass]="{ 'is-invalid': isSubmitted && message.invalid }"  placeholder="Enter your text" cols="30" rows="3" required class="form-control"></textarea>
+                            <div *ngIf="isSubmitted && message.invalid" class="invalid-feedback">
+                                <div *ngIf="$any(message)?.errors?.required"> Please leave your message</div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
 
                     <div class="w-75 p-2"><button type="submit" class="btn-buy btn btn-primary">Submit</button></div>

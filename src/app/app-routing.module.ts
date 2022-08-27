@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'bio', component:BioComponent},
   {path:'blog', component:BlogComponent},
+  {path:'blog/:slug', component:BlogDetailsComponent},
   {path:'blog-details', component:BlogDetailsComponent},
   {path:'contact', component:ContactComponent},
   {path:'**', component:NotfoundComponent},
@@ -20,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash:true})],
+  imports: [RouterModule.forRoot(routes)],
 
 // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 
