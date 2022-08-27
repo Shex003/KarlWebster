@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from './../blog.service';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./blog-details.component.scss']
 })
 export class BlogDetailsComponent implements OnInit {
+  API_URL =environment.API_URL
 
 slug!:string ;
 dataPublic:any;
