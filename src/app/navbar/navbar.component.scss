@@ -1,0 +1,62 @@
+.my-nav {
+    background-color: rgb(209, 240, 240);
+    // background-color: rgba(184, 236, 236, 0.501);
+}
+
+a,
+a:hover {
+    color: #000;
+    font-size: medium;
+    font-weight: 600;
+}
+
+li:hover {
+    background-color: rgba(95, 89, 89, 0.103);
+}
+
+.icon0 {
+    color: #bdbdbd;
+}
+
+.icon0:hover {
+    color: #1877F2;
+}
+
+.icon1 {
+    color: #bdbdbd;
+}
+
+.icon1:hover {
+    color: #E4405F;
+}
+
+.icon2 {
+    color: #bdbdbd;
+}
+
+.icon2:hover {
+    color: #1DA1F2;
+}
+
+nav {
+    z-index: 545454 !important;
+}
+
+.nav-item {
+    cursor: context-menu !important;
+}
+
+@media (max-width: 575.98px) {
+    #navbarNav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// mediaQsm(landscape phone)
+@media (max-width: 767.98px) {
+    #navbarNav {
+        display: flex;
+        flex-direction: column;
+    }
+}

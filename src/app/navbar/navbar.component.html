@@ -1,0 +1,41 @@
+<header class="text-center my-4" id="headline">
+    <ngx-typed-js [strings]="['KARL WEBSTER']" [typeSpeed]="80" [showCursor]="false">
+        <h1 class="typing header-font mb-0"></h1>
+    </ngx-typed-js>
+    <ngx-typed-js [strings]="[' The Offical Karl Webster Website ']" [startDelay]="1400" [typeSpeed]="30" [showCursor]="false">
+        <h6 class="typing "></h6>
+    </ngx-typed-js>
+
+</header>
+
+<!-- navbar -->
+
+<nav class="navbar navbar-expand my-nav" id="mainnav">
+    <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0  w-75 d-flex align-items-center justify-content-between">
+                <li class="nav-item" routerLink="/home">
+                    <a class="nav-link active">HOME</a>
+                </li>
+                <li class="nav-item" routerLink="/bio">
+                    <a class="nav-link active">BIO</a>
+                </li>
+                <li class="nav-item" routerLink="/blog">
+                    <a class="nav-link active">BLOG</a>
+                </li>
+                <li class="nav-item" routerLink="/contact">
+                    <a class="nav-link active">CONTACT</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <div class="socialmedia">
+                    <a class="ul-i" (click)="openMedia4()"><i class="icon1 py-2 fab mx-2 fa-instagram-square"></i></a>
+                    <a class="ul-i" (click)="openMedia2()"><i class="icon1 py-2 fab mx-2 fa-instagram"></i></a>
+                    <a class="ul-i" (click)="openMedia3()"><i class="icon2 py-2 fab mx-2 fa-twitter"></i></a>
+                    <a class="ul-i" (click)="openMedia1()"><i class="icon0 py-2 fab mx-2 fa-facebook"></i></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>

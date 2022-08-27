@@ -1,0 +1,54 @@
+.blog-h :hover {
+    transform: scale(1.1, 1.1);
+}
+
+.bolg-img {
+    transition: transform 1s;
+}
+
+.admin-p {
+    color: #6c757d;
+}
+
+.admin-bg {
+    background-color: #fafafa;
+}
+
+// mediaQsm(landscape phone)
+// @media (max-width: 767.98px) {
+//     .card-container {
+//         margin-bottom: 16px !important;
+//         width: 100% !important;
+//     }
+// }
+// mediaQmd(tablet)
+@media (max-width: 991.98px) {
+    .blog-text {
+        width: 100% !important;
+    }
+    .blog-h {
+        width: 100% !important;
+    }
+    .card-container {
+        width: 50% !important;
+        margin-bottom: 16px !important;
+    }
+    .card-text {
+        margin-top: 16px !important;
+    }
+}
+
+// mediaQxsm(phone)
+@media (max-width: 575.98px) {
+    .card-container {
+        margin-bottom: 16px !important;
+        width: 100% !important;
+    }
+    .card-items {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .card-text {
+        margin-top: 16px !important;
+    }
+}
