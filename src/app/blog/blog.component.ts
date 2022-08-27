@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { BlogService } from './../blog.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { BlogService } from './../blog.service';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-
+  API_URL =environment.API_URL
 dataPublic: any[]=[];
 
   constructor(private _BlogService:BlogService) { }

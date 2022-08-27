@@ -10,13 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BlogDetailsComponent implements OnInit {
 
-
-  constructor() {
-
+slug!:string ;
+dataPublic:any;
+  constructor(private route:ActivatedRoute,private _BlogService:BlogService) {
+    this.slug = this.route.snapshot.params['slug'];
+    console.log('this.slug',this.slug)
    }
 
-  ngOnInit(): void {
 
-  }
+   ngOnInit(): void {
+     this._BlogService.getBlogDetails(this.slug).subscribe((response)=>{
+ this.dataPublic = response.data;
+ console.log('this.dataPublic',this.dataPublic)
+     })
+   }
 
-}
+ }

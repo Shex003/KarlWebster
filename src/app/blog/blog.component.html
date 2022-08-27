@@ -19,7 +19,7 @@
         <div *ngFor="let public of dataPublic" class="card-container col-md-3">
             <div class="card-items h-100 ">
                 <a [routerLink]="['/blog',public?.slug]" class="text-decoration-none">
-                    <img [src]="'https://karlweb-api.tarekrida.com/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
+                    <img [src]="API_URL+'/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
 
                     <div class="card-text mt-2">
                         <h5 class="fw-bold text-primary">{{public.name}} </h5>
