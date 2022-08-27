@@ -14,8 +14,9 @@ const routes: Routes = [
   {path:'bio', component:BioComponent},
   {path:'blog', component:BlogComponent},
   {path:'blog/:slug', component:BlogDetailsComponent},
+  {path:'blog-details', component:BlogDetailsComponent},
   {path:'contact', component:ContactComponent},
-  // {path:'**', component:NotfoundComponent},
+  {path:'**', component:NotfoundComponent},
 
 ];
 

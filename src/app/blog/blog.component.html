@@ -1,5 +1,4 @@
 <div class="container ">
-    <a href="#" [routerLink]="['/blog',1111]">ssddsadasdas</a>
     <div class="row">
         <div class="blog-text col-md-6 mt-5">
             <h1 class="fw-bold text-primary"> <a class="cursor-p text-decoration-none" (click)="openCina()">Cinevillephilia</a> :: An Unquenchable Passion for Infinite Cinema</h1>
@@ -19,8 +18,8 @@
     <div class="row p-5">
         <div *ngFor="let public of dataPublic" class="card-container col-md-3">
             <div class="card-items h-100 ">
-                <a [routerLink]="['/blog',public.slug]" class="text-decoration-none">
-                    <img [src]="'https://karlweb-api.tarekrida.com/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
+                <a [routerLink]="['/blog',public?.slug]" class="text-decoration-none">
+                    <img [src]="API_URL+'/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
 
                     <div class="card-text mt-2">
                         <h5 class="fw-bold text-primary">{{public.name}} </h5>
