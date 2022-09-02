@@ -16,7 +16,7 @@
 
 <div class="container admin-bg">
     <div class="row p-5">
-        <div *ngFor="let public of dataPublic" class="card-container col-md-3">
+        <div *ngFor="let public of dataPublic" class="card-container col-md-3 mb-5">
             <div class="card-items h-100 ">
                 <a [routerLink]="['/blog',public?.slug]" class="text-decoration-none">
                     <img [src]="API_URL+'/'+public.featuredImage.serving" class="card-img-top h-75" alt="">
@@ -32,3 +32,4 @@
 
 
     </div>
+</div>

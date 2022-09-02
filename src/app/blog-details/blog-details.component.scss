@@ -1,0 +1,21 @@
+// mediaQxsm(phone)
+@media (max-width: 575.98px) {
+    .flex-img {
+        display: flex !important;
+    }
+    .card-img-top {
+        margin: auto !important;
+        width: 85% !important;
+    }
+}
+
+// mediaQmd(tablet)
+// @media (max-width: 991.98px) {
+//     .flex-img {
+//         display: flex !important;
+//     }
+//     .card-img-top {
+//         margin: auto !important;
+//         width: 85% !important;
+//     }
+// }

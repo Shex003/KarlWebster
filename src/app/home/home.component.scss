@@ -1,24 +1,24 @@
         .home-text {
             color: #000;
         }
-
+        
         .book-item,
         .future {
             background-color: #fafafa;
         }
-
+        
         .img-item {
             transition: transform 1s;
         }
-
+        
         .img-p:hover img {
             transform: scale(1.2, 1.2)
         }
-
+        
         .book-item01 {
             background-color: #fff;
         }
-
+        
         // mediaQxsm(phone)
         @media (max-width: 575.98px) {
             .intro {
@@ -61,15 +61,23 @@
             }
             .line-1,
             .line-3,
-            .line-5 {
+            .line-5,
+            .line-fu {
                 margin-top: 3rem !important;
             }
             .btn-sub {
                 width: 100% !important;
                 text-align: center !important;
             }
+            // .img-p {
+            //     display: flex !important;
+            // }
+            // .img-item {
+            //     margin: auto !important;
+            //     width: 85% !important;
+            // }
         }
-
+        
         // mediaQsm(landscape phone)
         @media (max-width: 767.98px) {
             .intro {
@@ -106,7 +114,7 @@
                 width: 100% !important;
             }
         }
-
+        
         // mediaQmd(tablet)
         @media (max-width: 991.98px) {
             .intro {

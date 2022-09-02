@@ -1,21 +1,19 @@
 <div class="container" *ngIf="dataPublic">
-  <div class=" mb-3">
-      <div class="row g-0 ">
-          <div class="col-md-4">
-              <img  [src]="API_URL+'/'+dataPublic?.featuredImage?.serving" class="card-img-top " alt="">
-          </div>
-          <div class="card-items h-100 ">
+    <div class=" mt-5">
+        <div class="row g-0 ">
+            <div class="flex-img col-md-4">
+                <img [src]="API_URL+'/'+dataPublic?.featuredImage?.serving" class="card-img-top " alt="">
+            </div>
+            <!-- <div class="card-items h-100 ">
+            </div> -->
+            <div class="col-md-7 offset-md-1">
+                <div class="card-body">
+                    <h1 class="fw-bold text-primary">{{dataPublic?.name}} </h1>
+                    <p class="card-text text-secondary" [innerHTML]="dataPublic?.content">
+                    </p>
+
+                </div>
+            </div>
         </div>
-          <div class="col-md-8">
-              <div class="card-body">
-                  <h1 class="fw-bold text-primary">{{dataPublic?.name}} </h1>
-                  <div class="card-text" [innerHTML]="dataPublic?.content">
-                  </div>
-
-              </div>
-          </div>
-
-
-      </div>
-  </div>
+    </div>
 </div>
