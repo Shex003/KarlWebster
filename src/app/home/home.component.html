@@ -11,9 +11,9 @@
             <div class="col-md-6 align-self-center">
                 <div class="home-text  ">
                     <p class="lead fw-semibold fs-5">My name is <a [routerLink]="['/bio']" class="fw-bold text-info text-decoration-none">Karl Webster</a> and this is my website. There used to be lots of things here— articles, reviews, guides, all kinds of things — but then I tore them
-                        all up and threw them all away. Was this a good idea? I really don&#39;t know. But it was time for a change. Now it&#39;s mostly links to some books that I&#39;ve written. Have a root around if you&#39;ve a mind to. As for the
-                        future,
-                        <a id="navlink" class="cursor-p text-primary fw-bold text-decoration-none ">THE AMSTERDAM GOOD MURDER GUIDE</a> is finished and should hopefully be with you later this year. Notice I'm careful not to name the year? Yep.
+                        all up and threw them all away. Was this a good idea? I really don't know. But it was time for a change. Now it&#39;s mostly links to some books that I&#39;ve written. Have a root around if you&#39;ve a mind to. As for the future,
+                        <a id="navlink" (click)="openNew3()" class="cursor-p text-primary fw-bold text-decoration-none ">THE AMSTERDAM GOOD MURDER GUIDE</a> is finished and should hopefully be with you later this year. Notice I'm careful not to name the
+                        year? Yep.
                     </p>
                 </div>
             </div>
@@ -28,7 +28,9 @@
 <div class="container" id="bookmark">
     <div class="row book-item book-item4 m-5 p-5">
         <div class="col-md-8 text-item4 offset-md-1">
-            <h1 class="fw-bold text-info mt-3">The Amsterdam Good Murder Guide </h1>
+            <a (click)="openNew3()" class="text-decoration-none cursor-p">
+                <h1 class="fw-bold text-info mt-3">The Amsterdam Good Murder Guide </h1>
+            </a>
             <p class="lead"><em>'This is the story of how I became a serial killer. And I know that sounds bad — you hear “serial
                 killer” and immediately you think: “bad egg”. Well … not this time. I'm the exception that proves
                 the rule. I'm a good guy, and the nicest multiple murderer in history. You'll see…'</em></p>
@@ -65,7 +67,7 @@
             </form>
         </div>
         <div class="img-p col-md-3">
-            <img src="assets/images/The-Amsterdam-Good-Murder-Duide-temporary-cover.jpeg" class="img-item   w-100" alt="">
+            <a (click)="openNew3()"><img src="assets/images/The-Amsterdam-Good-Murder-Duide-temporary-cover.jpeg" class="img-item  w-100 " alt=""></a>
         </div>
 
     </div>

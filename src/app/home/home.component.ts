@@ -35,6 +35,9 @@ openNew1(){
 openNwe2(){
   window.open("https://www.amazon.co.uk/Lives-Loves-Hana-Lee/dp/9083135519/")
 }
+openNew3(){
+  window.open("https://www.theamsterdamgoodmurderguide.com/")
+}
 
 
 body:any = $("html");
